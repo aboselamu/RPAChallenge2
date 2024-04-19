@@ -24,7 +24,7 @@ class DataRetriever:
     def retrive_data(self, num_months_ago, search_phrase):
         self.nu_months_ago = num_months_ago
         self.search_phrase = search_phrase
-        self.browser_manager = browser_manager
+        # self.browser_manager = browser_manager
         dp = DataProcessor()
 
         browser = self.browser_manager.browser
