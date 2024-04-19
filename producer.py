@@ -24,7 +24,7 @@ def producer():
     url = "https://www.aljazeera.com/"
     bm.opening_the_news_Site(url)
     bm.search_the_phrase("Business")
-    dr = DataRetriever()
+    dr = DataRetriever(bm)
     dr.retrive_data(1, "Business")
 
     # Close the browser
