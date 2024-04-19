@@ -29,26 +29,27 @@ def save_data_to_Excel():
     sheet_name = "Sheet1"
     worksheet = workbook.worksheet(sheet_name)
     row_to_append = [
-        ["No1", "Title", "Date", "Description", "Picture Filename", "Count", "Contains Money"]
+        ["No", "Title", "Date", "Description", "PictureFilename", "Count", "ContainsMoney"]
     ]
     # Append the row to the worksheet
     worksheet.append_rows_to_worksheet(row_to_append, header=False)
 
     # worksheet = workbook.worksheet(sheet_name)
 
-    headers = ["No", "Title", "Date", "Description", "Picture Filename", "Count", "Contains Money"]
+    headers = ["No", "Title", "Date", "Description", "PictureFilename", "Count", "ContainsMoney"]
     print("inside save to excel function")
     try:
         # Fetch the created work items and write them to the Excel file
         for item in workitems.inputs:
-            # item = workitems.inputs.currentprint("Received payload:", item.payload)
-            try:
-                row = [item.payload[header] for header in headers]
-            except Exception as e:
-                print(e, "row didn't work")
-                return e
-            print("inside save to excel for loop")
-            print(row, "Rowwwwwww")
+            row = [
+                item.payload.get("No", ""),
+                item.payload.get("Title", ""),
+                item.payload.get("Date", ""),
+                item.payload.get("Description", ""),
+                item.payload.get("PictureFilename", ""),
+                item.payload.get("Count", ""),
+                item.payload.get("ContainsMoney", "")
+            ]
             worksheet.append_rows_to_worksheet([row], header=False)
             worksheet.save_workbook()
         print("workitems finished successfully")
