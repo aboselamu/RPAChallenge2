@@ -19,11 +19,13 @@ from data_processor import DataProcessor
 
 class DataRetriever:
 
-    # self.data = []
 
+    # self.data = []
     def __init__(self):
-        
+        pass
+
     def retrive_data(self, num_months_ago, search_phrase, browser_manager):
+
         self.browser_manager = browser_manager
         dp = DataProcessor()
 
