@@ -14,9 +14,6 @@ class DataProcessor:
     def __init__(self):
         pass
 
-    def process_data(self, data):
-        pass
-
     # getting the date and description from the excert of the article
     def extract_before_ellipsis(self, text):
         print("INside extract_before_ecli")
