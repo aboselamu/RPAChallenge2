@@ -24,9 +24,9 @@ class DataRetriever:
     def __init__(self):
         pass
 
-    def retrive_data(self, num_months_ago, search_phrase, browser_manager):
+    def retrive_data(self, num_months_ago, search_phrase):
 
-        self.browser_manager = browser_manager
+        # self.browser_manager = browser_manager
         dp = DataProcessor()
 
         # browser = self.browser_manager.browser
