@@ -73,7 +73,7 @@ class BrowserManager:
             self.browser.click_element(locator2)
             print("finding the search area")
         except Exception as e:
-            print(e": No news associated with the search phrase")
+            print(e, ": No news associated with the search phrase")
         # sort by time
         dropdown_locator = "//select[@id='search-sort-option']/option[1]" 
         self.browser.click_element(dropdown_locator)
