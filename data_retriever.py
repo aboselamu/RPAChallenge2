@@ -19,18 +19,16 @@ from data_processor import DataProcessor
 
 class DataRetriever:
 
-
-    # self.data = []
-    def __init__(self):
-        pass
-
+    def __init__(self, browser_manager):
+        self.browser_manager = browser_manager
     def retrive_data(self, num_months_ago, search_phrase):
-
-        # self.browser_manager = browser_manager
+        self.nu_months_ago = num_months_ago
+        self.search_phrase = search_phrase
+        self.browser_manager = browser_manager
         dp = DataProcessor()
 
-        # browser = self.browser_manager.browser
-        browser = browser_manager
+        browser = self.browser_manager.browser
+        # browser = browser_manager
         # Declearing varibale to return the date
         # data =[]
         counter = 1
