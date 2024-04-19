@@ -21,15 +21,14 @@ class DataRetriever:
 
     # self.data = []
 
-    def __init__(self, browser_manager):
+    def __init__(self):
         
+    def retrive_data(self, num_months_ago, search_phrase, browser_manager):
         self.browser_manager = browser_manager
-        
-    def retrive_data(num_months_ago, search_phrase):
-        
         dp = DataProcessor()
 
-        browser = self.browser_manager.browser
+        # browser = self.browser_manager.browser
+        browser = browser_manager
         # Declearing varibale to return the date
         # data =[]
         counter = 1
