@@ -51,7 +51,7 @@ def save_data_to_Excel():
                 item.payload.get("ContainsMoney", "")
             ]
             worksheet.append_rows_to_worksheet([row], header=False)
-            worksheet.save_workbook()
+        workbook.save(excel_file_path)
         print("workitems finished successfully")
     except Exception as e:
         print(e, "save item didn't work")
