@@ -16,6 +16,7 @@ from robocorp.tasks import get_output_dir
 from browser_manager import BrowserManager as BM 
 from data_retriever import DataRetriever 
 
+@task
 def main():
     bm = BM()
     url = "https://www.aljazeera.com/"
