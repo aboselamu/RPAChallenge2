@@ -2,8 +2,10 @@
 # https://github.com/robocorp/rcc/blob/master/docs/recipes.md#what-is-in-robotyaml
 
 tasks:
-  Produce Work Item:
+  Starting the process:
     shell: python -m robocorp.tasks run producer.py -t producer
+  Oppening the Site:
+    shell: python -m robocorp.tasks run producer.py -t 
   Save To Excel:
     shell: python -m robocorp.tasks run consumer.py -t save_data_to_Excel
 
