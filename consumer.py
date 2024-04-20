@@ -46,9 +46,9 @@ def save_data_to_Excel():
                 item.payload.get("Title", ""),
                 item.payload.get("Date", ""),
                 item.payload.get("Description", ""),
-                item.payload.get("PictureFilename", ""),
+                item.payload.get("Picture Filename", ""),
                 item.payload.get("Count", ""),
-                item.payload.get("ContainsMoney", "")
+                item.payload.get("Contains Money", "")
             ]
             worksheet.append_rows_to_worksheet([row], header=False)
         workbook.save(excel_file_path)
