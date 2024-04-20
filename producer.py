@@ -24,6 +24,7 @@ number_of_months = 1
 @task
 def opening_site():
     global bm
+    global url
     bm.opening_the_news_Site(url)
 
 @task
