@@ -3,11 +3,7 @@
 
 tasks:
   Opening the Site:
-    shell: python -m robocorp.tasks run producer.py -t opening_the_news_Site
-  Searching the Phrase:
-    shell: python -m robocorp.tasks run producer.py -t searching_phrase
-  Data Extraction:
-    shell: python -m robocorp.tasks run producer.py -t extract_data
+    shell: python -m robocorp.tasks run producer.py -t main
   Save To Excel:
     shell: python -m robocorp.tasks run consumer.py -t save_data_to_Excel
 
