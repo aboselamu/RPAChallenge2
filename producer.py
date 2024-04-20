@@ -35,7 +35,7 @@ def searching_phrase():
 def extract_data():
     global bm
     global sp
-    global number_of months
+    global number_of_months
     dr = DataRetriever(bm)
     dr.retrive_data(number_of_months, sp)
     
