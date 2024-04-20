@@ -33,9 +33,9 @@ def save_data_to_Excel():
     ]
     # Append the row to the worksheet
     worksheet.append_rows_to_worksheet(row_to_append, header=False)
-
+    
     # worksheet = workbook.worksheet(sheet_name)
-
+    workbook.save(excel_file_path)
     headers = ["No", "Title", "Date", "Description", "PictureFilename", "Count", "ContainsMoney"]
     print("inside save to excel function")
     try:
